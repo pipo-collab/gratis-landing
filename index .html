@@ -23,6 +23,15 @@ a{color:#141414}a:hover{color:#000}
 @keyframes gr-wobble{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
 @keyframes gr-pop{from{transform:translateY(16px) rotate(-2deg);opacity:0}to{transform:translateY(0) rotate(-2deg);opacity:1}}
 .gr-track{animation:gr-marquee 28s linear infinite}
+.gr-track-rev{animation:gr-marquee-rev 92s linear infinite}
+.gr-logos-wrap:hover .gr-track-rev{animation-play-state:paused}
+@keyframes gr-marquee-rev{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+.gr-logo{font-family:'Inter Tight',sans-serif;font-weight:900;font-size:clamp(28px,3.2vw,44px);letter-spacing:-0.03em;text-transform:uppercase;color:#6E6E69;transition:color .2s}
+.gr-logo:hover{color:#F2F1EC}
+img.gr-logo{height:44px;width:auto;opacity:.6;filter:grayscale(1) brightness(0) invert(1)}
+img.gr-logo:hover{opacity:1}
+@media (prefers-reduced-motion: reduce){.gr-track,.gr-track-rev,.gr-cookie-btn{animation:none}}
+
 .gr-cookie-btn{animation:gr-wobble 3.2s ease-in-out infinite}
 .gr-cookie-btn:hover{animation-duration:.9s}
 .gr-slip{animation:gr-pop .45s cubic-bezier(.2,.9,.3,1.2) both}
@@ -288,11 +297,24 @@ a{color:#141414}a:hover{color:#000}
   <!-- CIERRE -->
   <section id="cafe" style="background: #141414; padding: clamp(88px, 11vw, 168px) clamp(20px, 5vw, 72px); text-align: center">
     <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 36px">
-      <h2 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 900; font-size: clamp(48px, 7vw, 112px); line-height: 0.9; letter-spacing: -0.045em; text-transform: uppercase">Bueno,<br>basta de scroll.<br><span style="color: #D4F31B; font-weight: 500">¿Tomamos un café?</span></h2>
+      <h2 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 900; font-size: clamp(48px, 7vw, 112px); line-height: 1.02; letter-spacing: -0.045em; text-transform: uppercase">Bueno,<br>basta de scroll.<br><span style="color: #D4F31B; font-weight: 500">¿Tomamos un café?</span></h2>
       <p style="margin: 0; max-width: 560px; font-size: 18px; line-height: 1.5; color: #B9B8B2">Contanos qué le falta a tu marca. Volvemos con un diagnóstico y una propuesta concreta.</p>
       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px">
         <a class="gr-cta" href="mailto:hola@estoesgratis.com?subject=Tomemos%20un%20caf%C3%A9&amp;body=Hola%20GRATIS%2C%20quiero%20hablar%20de%20mi%20marca.%0A%0AMarca%3A%20%0AQu%C3%A9%20le%20falta%3A%20%0A" style="background: #D4F31B; color: #141414; padding: 20px 32px; border-radius: 999px; font-family: 'Inter Tight', sans-serif; font-weight: 800; font-size: 18px; text-transform: uppercase; text-decoration: none; transition: transform .2s">Agendar un café</a>
         <a class="gr-cta" href="https://instagram.com/estoesgratis" style="border: 2px solid #D4F31B; color: #D4F31B; padding: 18px 30px; border-radius: 999px; font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 18px; text-decoration: none; transition: transform .2s">@estoesgratis</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARCAS QUE CONFIARON -->
+  <section aria-label="Marcas que confiaron en GRATIS" style="background: #141414; border-top: 1px solid #2A2A2A; padding: clamp(48px, 6vw, 80px) 0 clamp(40px, 5vw, 64px); overflow: hidden">
+    <div style="max-width: 1240px; margin: 0 auto 32px; padding: 0 clamp(20px, 5vw, 72px); display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 12px">
+      <h2 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 800; font-size: clamp(22px, 2.4vw, 32px); letter-spacing: -0.02em; color: #F2F1EC">Marcas que no lo dejaron a la suerte.</h2>
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #8E8D88">GRATIS®2026</span>
+    </div>
+    <div class="gr-logos-wrap" style="overflow: hidden; border-top: 1px solid #2A2A2A; border-bottom: 1px solid #2A2A2A; padding: 28px 0">
+      <div class="gr-track-rev" style="display: flex; align-items: center; width: max-content; gap: 56px; white-space: nowrap">
+        <span class="gr-logo">Adidas</span><span aria-hidden="true" style="color: #D4F31B">✳</span><span class="gr-logo">Das Pampas</span><span aria-hidden="true" style="color: #D4F31B">✳</span><span class="gr-logo">Andreani</span><span aria-hidden="true" style="color: #D4F31B">✳</span><span class="gr-logo">Zurich</span><span aria-hidden="true" style="color: #D4F31B">✳</span><span class="gr-logo">Caffettino</span><span aria-hidden="true" style="color: #D4F31B">✳</span><span class="gr-logo">Jägermeister</span><span aria-hidden="true" style="color: #D4F31B">✳</span><span class="gr-logo">Zurbarán Arte</span><span aria-hidden="true" style="color: #D4F31B">✳</span><span class="gr-logo">Turismo Bariloche</span><span aria-hidden="true" style="color: #D4F31B">✳</span><span class="gr-logo">Sbarro</span><span aria-hidden="true" style="color: #D4F31B">✳</span><span class="gr-logo">Integra</span><span aria-hidden="true" style="color: #D4F31B">✳</span><span class="gr-logo">Tercer Tiempo Trelew</span><span aria-hidden="true" style="color: #D4F31B">✳</span><span class="gr-logo">Chicken Chill</span><span aria-hidden="true" style="color: #D4F31B">✳</span><span class="gr-logo">El Casco Art Hotel</span><span aria-hidden="true" style="color: #D4F31B">✳</span><span class="gr-logo">Tufic Helados</span><span aria-hidden="true" style="color: #D4F31B">✳</span><span class="gr-logo">Conte Bienes Raíces</span><span aria-hidden="true" style="color: #D4F31B">✳</span><span class="gr-logo">Adidas</span><span aria-hidden="true" style="color: #D4F31B">✳</span><span class="gr-logo">Das Pampas</span><span aria-hidden="true" style="color: #D4F31B">✳</span><span class="gr-logo">Andreani</span><span aria-hidden="true" style="color: #D4F31B">✳</span><span class="gr-logo">Zurich</span><span aria-hidden="true" style="color: #D4F31B">✳</span><span class="gr-logo">Caffettino</span><span aria-hidden="true" style="color: #D4F31B">✳</span><span class="gr-logo">Jägermeister</span><span aria-hidden="true" style="color: #D4F31B">✳</span><span class="gr-logo">Zurbarán Arte</span><span aria-hidden="true" style="color: #D4F31B">✳</span><span class="gr-logo">Turismo Bariloche</span><span aria-hidden="true" style="color: #D4F31B">✳</span><span class="gr-logo">Sbarro</span><span aria-hidden="true" style="color: #D4F31B">✳</span><span class="gr-logo">Integra</span><span aria-hidden="true" style="color: #D4F31B">✳</span><span class="gr-logo">Tercer Tiempo Trelew</span><span aria-hidden="true" style="color: #D4F31B">✳</span><span class="gr-logo">Chicken Chill</span><span aria-hidden="true" style="color: #D4F31B">✳</span><span class="gr-logo">El Casco Art Hotel</span><span aria-hidden="true" style="color: #D4F31B">✳</span><span class="gr-logo">Tufic Helados</span><span aria-hidden="true" style="color: #D4F31B">✳</span><span class="gr-logo">Conte Bienes Raíces</span><span aria-hidden="true" style="color: #D4F31B">✳</span>
       </div>
     </div>
   </section>
