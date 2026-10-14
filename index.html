@@ -2,6 +2,14 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y985TD438G"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-Y985TD438G');
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GRATIS®2026 — No dejes tu marca a la suerte</title>
 <meta name="description" content="GRATIS® es una agencia de estrategia, creatividad, comunicación y contenido en Buenos Aires. No dejes tu marca a la suerte.">
@@ -327,6 +335,7 @@ img.gr-logo:hover{opacity:1}
 
 </div>
 <script>
+function track(name,params){try{if(window.gtag)gtag('event',name,params||{});}catch(e){}}
 (function(){
   var fortunes=[
     ['Te falta estrategia.','Un plan con objetivos, plazos y herramientas que generen resultados medibles.'],
@@ -343,10 +352,21 @@ img.gr-logo:hover{opacity:1}
     document.getElementById('f-title').textContent=fortunes[i][0];
     document.getElementById('f-body').textContent=fortunes[i][1];
     closed.style.display='none'; open.style.display='flex';
+    track('galletita_abierta',{fortuna:fortunes[i][0],numero:i+1});
     slip.style.animation='none'; void slip.offsetWidth; slip.style.animation='';
   }
   document.querySelectorAll('[data-open]').forEach(function(b){b.addEventListener('click',crack);});
 })();
+</script>
+<script>
+document.addEventListener('click',function(e){
+  var a=e.target.closest('a'); if(!a) return;
+  var href=a.getAttribute('href')||'';
+  if(a.classList.contains('gr-card')){ track('click_caso',{caso:(a.getAttribute('aria-label')||'').split(':')[0]}); return; }
+  if(href.indexOf('mailto:')===0){ track('click_mail',{ubicacion:a.closest('section,header,footer')?.id||'cierre'}); return; }
+  if(href.indexOf('instagram.com/estoesgratis')>-1){ track('click_instagram_gratis'); return; }
+  if(href==='#cafe'){ var s=a.closest('section,header'); track('click_cta_cafe',{ubicacion:(s&&s.id)||(s&&s.tagName.toLowerCase())||'otro'}); }
+});
 </script>
 </body>
 </html>
